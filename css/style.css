@@ -1,17 +1,33 @@
 @import 'navbar.css';
 @import 'header.css';
 @import 'breadcrumb.css';
+@import 'footer.css';
+@import 'backgrounds.css';
 
 body{
     background:#f4f4f4;
-}
-
-.bg-arielle-smile {
-    background-image: radial-gradient(circle 248px at center,#16d9e3 0,#30c7ec 47%,#46aef7 100%)!important;
 }
 
 .main-color-bg {
     background-color: #46aef7 !important;
     border-color: #2e85c2 !important;
     color: #fff !important;
+}
+
+.show-mobile{
+    display: none;
+}
+
+.hide-mobile{
+    display:block;
+}
+
+@media (max-width: 770px) {
+    .show-mobile{
+        display: block;
+    }
+
+    .hide-mobile{
+        display:none;
+    }
 }
