@@ -152,14 +152,21 @@
   background-color: #2e85c2;
 }
 
-.input-holder{
-  
-}
-
 .search-input{
-
+  color: #fff;
+  border-bottom: 1px solid #fff !important;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  outline: 0;
+  box-shadow: none;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
 }
 
 .search-icon{
-  
+  border-bottom: 1px solid #fff !important;
+  padding: 6px;
 }
+
+
+
