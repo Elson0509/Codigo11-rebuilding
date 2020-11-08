@@ -17,6 +17,7 @@
     <nav class="navbar navbar-expand-sm navbar-default bg-arielle-smile">
         <a class="navbar-brand" href="#">Codigo11</a>
         <button class="navbar-toggler" 
+            onclick="toggleVisibility()"
             type="button" 
             data-toggle="collapse" 
             data-target="#navbarsExampleDefault"
@@ -30,7 +31,7 @@
             <ul class="navbar-nav mr-auto">
                 
             </ul>
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav hide-sm navbar-right">
                 <li class="nav-item mr-4">
                     <div class="mt-2 navbar-collapse">
                         <input class="search-input" 
@@ -38,12 +39,13 @@
                             placeholder="código, nome ou segmento..." 
                             aria-label="Search"/>
                             <i class="fas fa-search fa-sm text-white search-icon"></i>
+                    </div>
                 </li>
                 <li class="nav-item">
                     <div class="dropdown dropdown-menu-right">
-                        <a class="nav-link dropdown-toggle" type="button" id="dropdownMenuButton"
+                        <a class="dropdown-toggle text-white" type="button" id="dropdownMenuButton"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Foto
+                            <img class="rounded-circle" src="https://codigo11-com-br.umbler.net/profiles/user6.jpg" alt="img-user" width="50" height="50">
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                             <a class="dropdown-item" href="#">Configuracões</a>
@@ -53,12 +55,31 @@
                 </li>
             </ul>
         </div>
+        <div class="collapsed-menu bg-dark menu-visibility">
+            <div class="search-collapsed-menu bg-premium-dark">
+                <input class="search-input-collapsed-menu" 
+                    type="text" 
+                    placeholder="Digite código, nome ou segmento..." 
+                    aria-label="Search"/>
+                <i class="fas fa-search fa-lg text-white search-icon-collapsed-menu"></i>
+            </div>
+            <div class="dropdown dropdown-menu-right profile-collapsed-menu">
+                <a class="nav-link dropdown-toggle text-white" type="button" id="dropdownMenuButton2"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img class="rounded-circle" src="https://codigo11-com-br.umbler.net/profiles/user6.jpg" alt="img-user" width="40" height="40">
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton2">
+                    <a class="dropdown-item" href="#">Configuracões</a>
+                    <a class="dropdown-item" href="#">Logout</a>
+                </div>
+            </div>
+        </div>
     </nav>
 
     <header id="header" class="bg-premium-dark">
         <div class="container">
             <div class="row">
-                <div class="col-12 hide-mobile">
+                <div class="col-12 hide-md">
                     <ul class="nav">
                         <li class="nav-item active">
                             <a class="nav-link text-white" href="index.html">Dashboard<span class="sr-only">(current)</span></a>
@@ -78,7 +99,7 @@
                     </ul>
                 </div>
                 <div class="col-12">
-                    <div class="dropdown create show-mobile">
+                    <div class="dropdown create show-md">
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           Menu
                         </button>
@@ -106,7 +127,7 @@
     <section id="main">
         <div class="container">
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-3 mb-4">
                     <div id="accordion">
                         <div class="card">
                           <div class="card-header" id="headingOne">
@@ -266,5 +287,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"
         integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf"
         crossorigin="anonymous"></script>
+    <script>
+        const toggleVisibility = () => {
+            const menu = document.getElementsByClassName("menu-visibility");
+            menu[0].style.visibility = menu[0].style.visibility == "visible" ? "hidden" : "visible";
+        }
+    </script>
 
 </html>

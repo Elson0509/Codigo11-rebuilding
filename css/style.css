@@ -14,20 +14,37 @@ body{
     color: #fff !important;
 }
 
-.show-mobile{
+.show-md{
     display: none;
 }
 
-.hide-mobile{
-    display:block;
+.hide-md{
+    display:inherit;
+}
+
+.show-sm{
+    display: none;
+}
+
+.hide-sm{
+    display:inherit;
 }
 
 @media (max-width: 770px) {
-    .show-mobile{
+    .show-md{
         display: block;
     }
 
-    .hide-mobile{
+    .hide-md{
+        display:none;
+    }
+}
+@media (max-width: 575px) {
+    .show-sm{
+        display: block;
+    }
+
+    .hide-sm{
         display:none;
     }
 }
